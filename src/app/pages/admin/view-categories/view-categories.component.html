@@ -1,0 +1,28 @@
+<!-- <mat-card>
+    <mat-list>
+        <h1 class="ml20 mt20">All Categories</h1>
+        <mat-list-item *ngFor="let c of categories">
+            <mat-icon mat-list-icon class="mt60">category</mat-icon>{{c.title}}
+            <div class="mb60 ">{{c.description}}</div>
+        </mat-list-item>
+
+    </mat-list>
+    <div class="container text-center mt20 mb20">
+        <button routerLink="/admin/add-category" mat-raised-button color="accent">Add New Category</button>
+    </div>
+</mat-card> -->
+
+<mat-card class="mt10" *ngFor="let c of categories">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>
+            {{c.title}}
+        </mat-card-title>
+        <mat-card-subtitle>
+            {{c.description}}
+        </mat-card-subtitle>
+    </mat-card-header>
+</mat-card>
+<div class="container text-center mt20">
+    <button routerLink="/admin/add-category/" mat-raised-button class="mb10" color="accent">Add New Category</button>
+</div>
